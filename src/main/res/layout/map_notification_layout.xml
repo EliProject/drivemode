@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ff00ff"
+    android:id="@+id/map_notify_ll"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="336dp"
+        android:layout_height="30dp">
+
+        <ImageView
+            android:id="@+id/notification_custom_map_icon"
+            android:layout_width="26dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/route_icon_home"/>
+
+
+        <TextView
+            android:id="@+id/notification_hint_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:paddingLeft="52dp"
+            android:paddingRight="15dp"
+            android:ellipsize="end"
+            android:lines="1"
+            android:text="导航"/>
+
+        <ImageView
+            android:id="@+id/delete_notify"
+            android:src="@drawable/delete"
+            android:paddingRight="10dp"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+
+    </RelativeLayout>
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp">
+
+        <RelativeLayout
+            android:id="@+id/notification_map_controller_ll"
+            android:layout_width="match_parent"
+            android:visibility="gone"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/notification_map"
+                style="@style/IconTheme"
+                android:src="@drawable/notify_map_icon" />
+
+            <TextView
+                android:id="@+id/notification_map_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/notification_map"
+                android:layout_below="@+id/notification_map"
+                android:text="高德地图"
+                style="@style/TitleTheme"/>
+
+
+            <ImageView
+                android:id="@+id/notification_home"
+                style="@style/IconTheme"
+                android:layout_toRightOf="@+id/notification_map"
+                android:src="@drawable/route_icon_home" />
+
+            <TextView
+                android:id="@+id/home_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/notification_home"
+                android:layout_below="@+id/notification_home"
+                android:text="回家"
+                style="@style/TitleTheme" />
+
+            <ImageView
+                android:id="@+id/notification_company"
+                style="@style/IconTheme"
+                android:layout_toRightOf="@+id/notification_home"
+                android:src="@drawable/notify_go_company_icon" />
+
+            <TextView
+                android:id="@+id/home_company"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/notification_company"
+                android:layout_below="@+id/notification_company"
+                android:text="去公司"
+                style="@style/TitleTheme" />
+
+            <ImageView
+                android:id="@+id/notification_e_dog"
+                style="@style/IconTheme"
+                android:layout_toRightOf="@+id/notification_company"
+                android:src="@drawable/notify_open_e_dog_icon" />
+
+            <TextView
+                android:id="@+id/e_dog_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/notification_e_dog"
+                android:layout_below="@+id/notification_e_dog"
+                android:text="电子狗"
+                style="@style/TitleTheme"/>
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/notification_maps_icon_ll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/notification_media_icon21"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingLeft="80dp" />
+
+            <ImageView
+                android:id="@+id/notification_media_icon22"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:paddingRight="80dp" />
+
+            <ImageView
+                android:id="@+id/notification_media_icon31"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingLeft="50dp"
+                android:src="@drawable/ic_skip_previous_white_24dp" />
+
+            <ImageView
+                android:id="@+id/notification_media_icon32"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/ic_play_arrow_white_24dp" />
+
+            <ImageView
+                android:id="@+id/notification_media_icon33"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:paddingRight="50dp"
+                android:src="@drawable/ic_skip_next_white_24dp" />
+
+            <ImageView
+                android:id="@+id/notification_media_more"
+                android:src="@drawable/ic_skip_next_white_24dp"
+                android:layout_alignParentRight="true"
+                android:paddingRight="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+
+        </RelativeLayout>
+
+
+    </FrameLayout>
+
+</LinearLayout>

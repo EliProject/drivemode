@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2015 Meizu Telecom Equipment Co., Ltd. All rights reserved.
+
+     Author: Gao Rui <gaorui@meizu.com>
+-->
+
+<rotate xmlns:android="http://schemas.android.com/apk/res/android"
+    android:drawable="@drawable/ic_shortcut_anim_on"
+    android:pivotX="50%"
+    android:pivotY="50%"
+    android:fromDegrees="0"
+    android:toDegrees="360">
+</rotate>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.eli.drivemodedemo">
+
+
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.BLUETOOTH_PRIVILEGED" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS" />
+
+    <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <application android:allowBackup="true" android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name" android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true" android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
+        <service
+            android:name="com.drivemode.music.MyNotificationListenerService"
+            android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE">
+
+            <intent-filter>
+                <action android:name="android.service.notification.NotificationListenerService" />
+            </intent-filter>
+        </service>
+
+        <service android:name="com.drivemode.music.MusicPlayService"
+            >
+            <intent-filter>
+                <action android:name="flyme.drivemode.service.playermusic" />
+            </intent-filter>
+        </service>
+
+
+        <service android:name="com.drivemode.map.MapNotifyService"
+            >
+            <intent-filter>
+                <action android:name="flyme.drivemode.service.map" />
+            </intent-filter>
+        </service>
+
+        <service android:name="com.drivemode.settings.bluetooth.BlueToothStartDriveModeService" >
+        </service>
+
+        <receiver android:name="com.drivemode.settings.bluetooth.BootBroadcastReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"></action>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name="com.drivemode.map.MapActivity" ></activity>
+        <activity android:name="com.drivemode.music.MediaActivity" ></activity>
+        <activity android:name="com.drivemode.settings.DriveModeSettingsActivity" ></activity>
+        <activity android:name="com.drivemode.settings.bluetooth.BlueToothConnActivity"></activity>
+
+
+    </application>
+
+</manifest>

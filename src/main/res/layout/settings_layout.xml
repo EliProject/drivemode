@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/drivemode_settings_icon"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/drivemode_name_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/imageView"
+        android:layout_below="@+id/imageView"
+        android:layout_marginTop="11dp"
+        android:text="@string/settings_drivemode" />
+
+
+
+　　　<!--第一项-->
+
+    <ImageView
+        android:id="@+id/line2"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_below="@+id/drivemode_name_id"
+        android:background="@color/black"
+        android:layout_width="match_parent"
+        android:layout_height="2dp" />
+
+    <LinearLayout
+        android:id="@+id/bluetooth_start_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_below="@+id/line2"
+        android:layout_marginStart="24dp"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/bluetooth_start_title"
+            android:text="@string/settings_bluetooth_start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:fontFamily="sans-serif-medium"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/bluetooth_start_info"
+            android:text="@string/settings_bluetooth_start＿tips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:paddingTop="2dp"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+    <Switch
+        android:id="@+id/conn_bluetooth_start_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/line2"
+        android:layout_alignParentRight="true" />
+
+    　　　<!--第二项-->
+
+
+    <ImageView
+        android:id="@+id/line3"
+        android:background="@color/black"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/bluetooth_start_layout"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp" />
+
+
+
+    <LinearLayout
+        android:id="@+id/drivemode_bluetooth_devies_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_below="@+id/line3"
+        android:layout_marginStart="24dp"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/drivemode_bluetooth_devies_title"
+            android:text="@string/settings_drivemode_devices"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:fontFamily="sans-serif-medium"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/drivemode_bluetooth_devies_info"
+            android:text="@string/settings_drivemode_no_devices"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:paddingTop="2dp"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/drivemode_bluetooth_devies_next"
+        style="@style/DriveModeSettingIconTheme"
+        android:layout_below="@+id/line3" />
+
+
+    　　　<!--第三项-->
+
+    <ImageView
+        android:id="@+id/line4"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_below="@+id/drivemode_bluetooth_devies_layout"
+        android:background="@color/black"
+        android:layout_width="match_parent"
+        android:layout_height="2dp" />
+
+    <LinearLayout
+        android:id="@+id/auto_play_music_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_below="@+id/line4"
+        android:layout_marginStart="24dp"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/auto_play_music_layout_title"
+            android:text="@string/settings_car_auto_play_music"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:fontFamily="sans-serif-medium"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/auto_play_music_layout_info"
+            android:text="@string/settings_car_auto_play_music_tips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:paddingTop="2dp"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+    <Switch
+        android:id="@+id/auto_play_music_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/line4"
+        android:layout_alignParentRight="true" />
+
+
+    　　　<!--第四项-->
+
+    <ImageView
+        android:id="@+id/line5"
+        android:background="@color/black"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginBottom="10dp"
+        android:layout_below="@+id/auto_play_music_layout"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="14dp" />
+
+
+
+    <LinearLayout
+        android:id="@+id/drivemode_home_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_below="@+id/line5"
+        android:layout_marginStart="24dp"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/drivemode_home_title"
+            android:text="@string/settings_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:fontFamily="sans-serif-medium"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/drivemode_home_info"
+            android:text="@string/settings_home_tips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:paddingTop="2dp"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/drivemode_home_next"
+        style="@style/DriveModeSettingIconTheme"
+        android:layout_below="@+id/line5"/>
+
+
+    <!--第五项-->
+
+    <ImageView
+        android:id="@+id/line6"
+        android:background="@color/black"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/drivemode_home_layout"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp" />
+
+
+
+    <LinearLayout
+        android:id="@+id/drivemode_company_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_below="@+id/line6"
+        android:layout_marginStart="24dp"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/drivemode_company_title"
+            android:text="@string/settings_company"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:fontFamily="sans-serif-medium"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/drivemode_company_info"
+            android:text="@string/settings_company_tips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:paddingTop="2dp"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/drivemode_company_next"
+        style="@style/DriveModeSettingIconTheme"
+        android:layout_below="@+id/line6" />
+
+
+    <ImageView
+        android:id="@+id/line7"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"
+        android:layout_below="@+id/drivemode_company_layout"
+        android:background="@color/black"
+        android:layout_width="match_parent"
+        android:layout_height="2dp" />
+
+    <Button
+        android:id="@+id/exit_drive_mode"
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape"
+        android:text="@string/settings_exit_drivemode"
+        android:layout_below="@+id/line7"
+        android:layout_centerHorizontal="true" />
+
+
+</RelativeLayout>

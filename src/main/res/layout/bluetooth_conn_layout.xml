@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <ImageView
+        android:id="@+id/bluetooth_icon"
+        android:src="@drawable/ic_qs_bluetooth_on"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_width="50dp"
+        android:layout_height="50dp" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="请指定车载蓝牙"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/bluetooth_icon"
+        android:id="@+id/select_drivemode_bluetooth"
+        android:layout_marginStart="84dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="连接此蓝牙时将自动启动驾驶模式"
+        android:layout_below="@+id/select_drivemode_bluetooth"
+        android:id="@+id/select_drivemode_bluetooth_tip"
+        android:layout_marginStart="84dp" />
+
+    <ListView
+        android:id="@+id/show_bluetooth_listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/select_drivemode_bluetooth_tip" />
+
+</RelativeLayout>
