@@ -2,17 +2,27 @@ package com.example.eli.drivemodedemo;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.drivemode.WelComeDriveModeActivity;
 import com.drivemode.map.MapActivity;
 import com.drivemode.music.MediaActivity;
-import com.drivemode.settings.DriveModeSettingsActivity;
+import com.drivemode.settings.bluetooth.BlueToothConnActivity;
 import com.drivemode.settings.bluetooth.BlueToothStartDriveModeService;
 
 public class MainActivity extends Activity {
+
+    private SharedPreferences mSharedPref;
+    private SharedPreferences.Editor mEdit;
+
+    private static final boolean FIRST_TIME_VALUE = true;
+    private static final String FIRST_TIME＿KEY = "first_time";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +38,9 @@ public class MainActivity extends Activity {
         mapBtn.setOnClickListener(mOnClickListener);
         bluetoothBtn.setOnClickListener(mOnClickListener);
         settingsBtn.setOnClickListener(mOnClickListener);
+
+        mSharedPref = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
+        mEdit = mSharedPref.edit();
 
         startService(new Intent(this, BlueToothStartDriveModeService.class));
     }
@@ -49,8 +62,16 @@ public class MainActivity extends Activity {
                     Toast.makeText(MainActivity.this, "还没有上线，请等待！",Toast.LENGTH_SHORT).show();
                     break;
                 case R.id.setttings:
-                    Intent settingsIntent = new Intent(getApplicationContext(), DriveModeSettingsActivity.class);
-                    startActivity(settingsIntent);
+                    boolean firstime = mSharedPref.getBoolean(FIRST_TIME＿KEY, FIRST_TIME_VALUE);
+                    if (firstime) {
+                        Intent welComeIntent = new Intent(getApplicationContext(), WelComeDriveModeActivity.class);
+                        startActivity(welComeIntent);
+                        mEdit.putBoolean(FIRST_TIME＿KEY, false);
+                        mEdit.apply();
+                    } else {
+                        Intent settingsIntent = new Intent(getApplicationContext(), BlueToothConnActivity.class);
+                        startActivity(settingsIntent);
+                    }
                     break;
             }
         }

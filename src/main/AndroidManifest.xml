@@ -63,6 +63,7 @@
         <activity android:name="com.drivemode.music.MediaActivity" ></activity>
         <activity android:name="com.drivemode.settings.DriveModeSettingsActivity" ></activity>
         <activity android:name="com.drivemode.settings.bluetooth.BlueToothConnActivity"></activity>
+        <activity android:name="com.drivemode.WelComeDriveModeActivity" ></activity>
 
 
     </application>

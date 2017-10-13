@@ -759,9 +759,6 @@
         <string name="navagation">导航</string>
         <string name="select_maps">请选择地图</string>
 
-
-
-
         <!--设置相关的-->
         <string name="settings_drivemode">驾驶模式</string>
         <string name="settings_bluetooth_start">连接车载蓝牙时启动</string>
@@ -779,8 +776,17 @@
         <string name="settings_company">公司</string>
         <string name="settings_company_tips">暂未设置</string>
 
-
         <string name="settings_exit_drivemode">退出驾驶模式</string>
 
+
+        <!--设置相关的-->
+        <string name="optimized_scene">优化场景</string>
+        <string name="optimized_scene_details">优化驾驶场景下的导航，来电等功能</string>
+        <string name="customized">定制</string>
+        <string name="customized_details">可以选择自己喜欢的地图，音乐应用</string>
+        <string name="using_voice">车内动口不动手</string>
+        <string name="using_voice_details">说指令[Hi,魅族],可语音操作手机</string>
+        <string name="next_step">下一步</string>
+        <string name="start_now">开始体验</string>
 
 </resources>

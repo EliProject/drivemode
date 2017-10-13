@@ -3,6 +3,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <TextView
+        android:id="@+id/skip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_alignParentTop="true"
+        android:text="跳过" />
 
     <ImageView
         android:id="@+id/bluetooth_icon"
@@ -37,7 +46,30 @@
         android:layout_height="match_parent"
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
+        android:layout_marginBottom="80dp"
         android:layout_marginTop="20dp"
         android:layout_below="@+id/select_drivemode_bluetooth_tip" />
+
+    <RelativeLayout
+        android:id="@+id/bottom_ll"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:background="@color/qs_detail_empty"
+        android:gravity="center"
+        android:layout_height="80dp">
+
+        <Button
+            android:id="@+id/start_now"
+            android:layout_width="260dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape"
+            android:textColor="@color/black"
+            android:text="@string/start_now"
+            />
+
+    </RelativeLayout>
+
 
 </RelativeLayout>

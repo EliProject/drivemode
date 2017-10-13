@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/drivemode_settings_icon"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/drivemode_name_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/imageView"
+        android:layout_below="@+id/imageView"
+        android:layout_marginTop="11dp"
+        android:text="@string/settings_drivemode" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/drivemode_name_id"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="14dp"
+        android:src="@drawable/tick" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignTop="@+id/imageView3"
+        android:layout_marginStart="29dp"
+        android:layout_toEndOf="@+id/imageView3"
+        android:orientation="vertical"
+        android:id="@+id/linearLayout">
+
+        <TextView
+            android:id="@+id/optimized_scene"
+            android:text="@string/optimized_scene"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+        <TextView
+            android:id="@+id/optimized_scene_details"
+            android:text="@string/optimized_scene_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="36dp"
+        android:src="@drawable/customed"
+        android:layout_below="@+id/linearLayout"
+        android:layout_alignStart="@+id/imageView6" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignStart="@+id/linearLayout"
+        android:layout_alignTop="@+id/imageView4"
+        android:orientation="vertical"
+        android:id="@+id/linearLayout2">
+
+
+        <TextView
+            android:id="@+id/customized"
+            android:text="@string/customized"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+        <TextView
+            android:id="@+id/customized_details"
+            android:text="@string/customized_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="46dp"
+        android:src="@drawable/voice"
+        android:layout_below="@+id/imageView4"
+        android:layout_alignStart="@+id/imageView3" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignStart="@+id/linearLayout2"
+        android:layout_alignTop="@+id/imageView6"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/using_voice"
+            android:text="@string/using_voice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+        <TextView
+            android:id="@+id/using_voice_details"
+            android:text="@string/using_voice_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/next_step"
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape"
+        android:text="@string/next_step"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="28dp" />
+
+</RelativeLayout>

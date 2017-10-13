@@ -23,6 +23,7 @@ import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.settingslib.bluetooth.CachedBluetoothDevice;
@@ -57,6 +58,8 @@ public class BlueToothConnActivity extends Activity {
 
     private ImageView mScanBlueToothIV;
 
+    private Button mStartNowBtn;
+    private TextView mSkipTV;
 
     private SharedPreferences mSharedPref;
     private SharedPreferences.Editor mEdit;
@@ -81,6 +84,26 @@ public class BlueToothConnActivity extends Activity {
         handler=new Handler();
         mShowBlueToothListView = findViewById(R.id.show_bluetooth_listview);
         mShowBlueToothListView.setOnItemClickListener(onBluetoothListItemClickListener);
+
+        mStartNowBtn = findViewById(R.id.start_now);
+        mStartNowBtn.setTextColor(getColor(R.color.qs_detail_empty));
+        mStartNowBtn.setEnabled(false);
+        mStartNowBtn.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //startActivity(new Intent(getBaseContext(),""));
+                Toast.makeText(BlueToothConnActivity.this, "跳转到地图页面!", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        mSkipTV = findViewById(R.id.skip);
+        mSkipTV.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //startActivity(new Intent(getBaseContext(),""));
+                Toast.makeText(BlueToothConnActivity.this, "跳转到地图页面!", Toast.LENGTH_SHORT).show();
+            }
+        });
 
         //进入这个页面的时候，开始扫描蓝牙
         mBluetoothControllerImpl.setBluetoothEnabled(true);
@@ -125,6 +148,9 @@ public class BlueToothConnActivity extends Activity {
                     BluetoothDevice device = intent.getParcelableExtra(BluetoothDevice.EXTRA_DEVICE);
                     mEdit.putString(KEY,device.getName());
                     mEdit.apply();
+
+                    mStartNowBtn.setEnabled(true);
+                    mStartNowBtn.setTextColor(getColor(R.color.black));
                 }
             }
 
